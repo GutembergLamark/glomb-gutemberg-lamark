@@ -1,3 +1,144 @@
+@import "/src/sass/abstracts/variables";
+@import "/src/sass/abstracts/utilities";
+
 .header {
-  background: blue;
+  border-bottom: 1px solid #bbc0d1;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+  }
+
+  &__dropdown {
+    display: inline-block;
+
+    & > button {
+      display: flex;
+
+      padding: 0.5rem 1rem;
+
+      font-size: 1rem;
+
+      cursor: pointer;
+    }
+  }
+
+  &__hamburguer {
+    color: #000;
+    border-top: 2px solid;
+
+    width: 20px;
+  }
+
+  &__hamburguer::after,
+  &__hamburguer::before {
+    content: "";
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background: currentColor;
+
+    margin-top: 5px;
+
+    transition: all 0.5s;
+
+    position: relative;
+  }
+
+  &__navigation {
+    display: block;
+
+    position: absolute;
+    right: 0;
+    top: 7rem;
+
+    visibility: hidden;
+    overflow-y: hidden;
+
+    width: 100%;
+    height: 0;
+
+    padding: 1.2rem 1.6rem;
+    margin: 2rem 0;
+
+    background: $color-white;
+
+    z-index: 10;
+
+    transition: all 0.5s ease-in-out;
+
+    & li {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.2rem;
+      padding: 1.5rem 0;
+      border-bottom: 2px solid rgba($color-black, 0.05);
+
+      a {
+        text-decoration: none;
+        color: $color-black;
+      }
+    }
+  }
+
+  &__dropdown.active &__navigation {
+    visibility: visible;
+    height: 100%;
+  }
+
+  &__dropdown.active &__hamburguer {
+    border-top-color: transparent;
+
+    &::before {
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+
+  @include min(769) {
+    &__container {
+      padding: 1rem 5rem;
+    }
+
+    &__dropdown {
+      button {
+        display: none;
+      }
+    }
+
+    &__navigation,
+    &__dropdown.active &__navigation {
+      width: max-content;
+      position: inherit;
+      height: auto;
+      margin: 0;
+      visibility: visible;
+
+      & ul {
+        display: flex;
+        gap: 2rem;
+      }
+
+      & li {
+        font-size: 1.5rem;
+
+        border: none;
+      }
+    }
+  }
+
+  @include min(1024) {
+    &__navigation {
+      & li {
+        font-size: 1.7rem;
+      }
+    }
+  }
 }

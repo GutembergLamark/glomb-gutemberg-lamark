@@ -1,0 +1,44 @@
+html,
+body,
+header,
+main,
+footer,
+section,
+div,
+aside,
+nav,
+ul,
+li,
+button,
+h1,
+h2,
+h3,
+p,
+a,
+figure,
+img {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $color-white;
+  position: relative;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 calc((100vw - 1350px) / 2);
+}

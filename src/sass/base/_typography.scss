@@ -1,0 +1,30 @@
+.heading-primary {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+
+  margin-bottom: 1rem;
+
+  color: $color-black;
+}
+
+.heading-secondary {
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: $color-black;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  font-family: "Inter", sans-serif;
+
+  color: $color-black;
+
+  margin-bottom: 2.5rem;
+}

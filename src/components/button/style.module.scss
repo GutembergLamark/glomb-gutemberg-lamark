@@ -1,0 +1,18 @@
+@import "/src/sass/abstracts/variables";
+
+.button {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 4px;
+
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+
+  &--blue {
+    background: $color-blue;
+    color: $color-white;
+  }
+  &--white {
+  }
+}

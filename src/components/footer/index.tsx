@@ -1,9 +1,5 @@
 const Footer = function () {
-  return (
-    <footer>
-      <h1>Footer</h1>
-    </footer>
-  );
+  return <footer></footer>;
 };
 
 export default Footer;
