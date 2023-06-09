@@ -15,27 +15,6 @@ type ISplideObject = {
 const SliderText = function () {
   return (
     <>
-      <p className="paragraph paragraph--sub margin-bottom-small">
-        Gratidão pela justiça alcançada
-      </p>
-
-      <div className={style.stars}>
-        {Array(5)
-          .fill(null)
-          .map((index) => {
-            return (
-              <Image
-                key={index}
-                className={style.star}
-                src="/assets/img/svg/star.svg"
-                alt="Estrela"
-                width={20}
-                height={20}
-              />
-            );
-          })}
-      </div>
-
       <Splide
         hasTrack={false}
         options={{
@@ -46,6 +25,25 @@ const SliderText = function () {
       >
         <SplideTrack>
           <SplideSlide className={style["slider-text__slide"]}>
+            <p className="paragraph paragraph--sub margin-bottom-small">
+              Gratidão pela justiça alcançada
+            </p>
+            <div className={style.stars}>
+              {Array(5)
+                .fill(null)
+                .map((index) => {
+                  return (
+                    <Image
+                      key={index}
+                      className={style.star}
+                      src="/assets/img/svg/star.svg"
+                      alt="Estrela"
+                      width={20}
+                      height={20}
+                    />
+                  );
+                })}
+            </div>
             <p className="paragraph">
               Agradeço por transformarem minha vida através da justiça,
               proporcionando tranquilidade e segurança na defesa dos meus
@@ -60,6 +58,25 @@ const SliderText = function () {
             </p>
           </SplideSlide>
           <SplideSlide className={style["slider-text__slide"]}>
+            <p className="paragraph paragraph--sub margin-bottom-small">
+              Gratidão pela justiça alcançada
+            </p>
+            <div className={style.stars}>
+              {Array(5)
+                .fill(null)
+                .map((index) => {
+                  return (
+                    <Image
+                      key={index}
+                      className={style.star}
+                      src="/assets/img/svg/star.svg"
+                      alt="Estrela"
+                      width={20}
+                      height={20}
+                    />
+                  );
+                })}
+            </div>
             <p className="paragraph">
               Agradeço por transformarem minha vida através da justiça,
               proporcionando tranquilidade e segurança na defesa dos meus
@@ -74,6 +91,25 @@ const SliderText = function () {
             </p>
           </SplideSlide>
           <SplideSlide className={style["slider-text__slide"]}>
+            <p className="paragraph paragraph--sub margin-bottom-small">
+              Gratidão pela justiça alcançada
+            </p>
+            <div className={style.stars}>
+              {Array(5)
+                .fill(null)
+                .map((index) => {
+                  return (
+                    <Image
+                      key={index}
+                      className={style.star}
+                      src="/assets/img/svg/star.svg"
+                      alt="Estrela"
+                      width={20}
+                      height={20}
+                    />
+                  );
+                })}
+            </div>
             <p className="paragraph">
               Agradeço por transformarem minha vida através da justiça,
               proporcionando tranquilidade e segurança na defesa dos meus
@@ -88,6 +124,25 @@ const SliderText = function () {
             </p>
           </SplideSlide>
           <SplideSlide className={style["slider-text__slide"]}>
+            <p className="paragraph paragraph--sub margin-bottom-small">
+              Gratidão pela justiça alcançada
+            </p>
+            <div className={style.stars}>
+              {Array(5)
+                .fill(null)
+                .map((index) => {
+                  return (
+                    <Image
+                      key={index}
+                      className={style.star}
+                      src="/assets/img/svg/star.svg"
+                      alt="Estrela"
+                      width={20}
+                      height={20}
+                    />
+                  );
+                })}
+            </div>
             <p className="paragraph">
               Agradeço por transformarem minha vida através da justiça,
               proporcionando tranquilidade e segurança na defesa dos meus
