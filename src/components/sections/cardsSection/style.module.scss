@@ -1,7 +1,10 @@
 @import "/src/sass/abstracts/variables";
+@import "/src/sass/abstracts/utilities";
 
 .cards {
-  padding: 5rem 0;
+  margin: 0 0 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   position: relative;
   margin-bottom: 5rem;
 
@@ -25,5 +28,26 @@
 
   &::after {
     bottom: 0;
+  }
+
+  @include min(769) {
+    & {
+      clip-path: polygon(0 8%, 100% 0%, 100% 99%, 0% 100%);
+      background: $color-gray-light;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+
+      padding: 4rem 3rem;
+      padding-top: 8rem;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }

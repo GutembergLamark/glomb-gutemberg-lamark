@@ -1,4 +1,5 @@
 @import "/src/sass/abstracts/variables";
+@import "/src/sass/abstracts/utilities";
 
 .button {
   width: 100%;
@@ -9,10 +10,20 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 
+  @include min(1200) {
+    & {
+      font-size: 1.8rem;
+    }
+  }
+
+  cursor: pointer;
+
   &--blue {
     background: $color-blue;
     color: $color-white;
   }
   &--white {
+    background: $color-white;
+    color: $color-gray-dark;
   }
 }

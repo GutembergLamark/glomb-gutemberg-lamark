@@ -19,5 +19,17 @@
 }
 
 .grid--col-1-of-2 {
-  grid-column: span 2;
+  grid-column: span 2 !important;
+}
+
+.margin-bottom-top {
+  margin: 2rem 0;
+}
+
+.margin-top-small {
+  margin: 1rem 0 0 !important;
+}
+
+.margin-bottom-small {
+  margin: 0 0 1rem !important;
 }

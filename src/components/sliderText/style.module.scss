@@ -1,0 +1,39 @@
+.slider-text {
+  &__arrows {
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+
+    & button {
+      border: 2px solid black;
+      background: none;
+      & svg {
+        transform: rotate(0);
+      }
+    }
+
+    & button:last-of-type {
+      & svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__slide {
+    margin: 0 !important;
+
+    & p {
+      margin: 2rem 0;
+    }
+
+    & p:not(:first-of-type) {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+.star {
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}

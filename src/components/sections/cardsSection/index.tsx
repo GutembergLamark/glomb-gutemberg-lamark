@@ -1,10 +1,15 @@
 import TextBlock from "@/components/textBlock";
 
 import style from "./style.module.scss";
+import { MutableRefObject } from "react";
 
-const CardsSection = function () {
+const CardsSection = function ({
+  reference,
+}: {
+  reference: MutableRefObject<null>;
+}) {
   return (
-    <section className={`${style.cards} wrapper`}>
+    <section className={`${style.cards} wrapper`} ref={reference}>
       <div className={style.cards__container}>
         <TextBlock modifier="block--card">
           <div></div>

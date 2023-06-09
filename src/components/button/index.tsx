@@ -4,14 +4,21 @@ import style from "./style.module.scss";
 
 type Props = {
   children: ReactNode;
-  modifier?: "blue" | "white";
+  color?: "blue" | "white";
+  modifier?: string;
 };
 
-const Button = function ({ children, modifier }: Props) {
-  const modifierClass = modifier ? style[`button--${modifier}`] : "";
+const Button = function ({ children, color, modifier }: Props) {
+  const modifierClass = modifier ? `${modifier}` : "";
 
   return (
-    <button className={`${style.button} ${modifierClass}`}>{children}</button>
+    <button
+      className={`${style.button} ${modifierClass} ${
+        style[`button--${color}`]
+      }`}
+    >
+      {children}
+    </button>
   );
 };
 

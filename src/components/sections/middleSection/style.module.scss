@@ -1,0 +1,113 @@
+@import "/src/sass/abstracts/variables";
+@import "/src/sass/abstracts/utilities";
+
+.middle {
+  &__container {
+    /* display: grid;
+    grid-template-columns: 1fr; */
+
+    & figure {
+      margin: 0 auto;
+      text-align: center;
+
+      img {
+        border-radius: 3.2rem;
+
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+      }
+    }
+
+    &__background {
+      background: $color-white-1;
+    }
+
+    & button {
+      margin-bottom: 5rem;
+    }
+
+    ul,
+    li {
+      list-style: disc;
+    }
+
+    & li {
+      margin-left: 2rem;
+    }
+  }
+
+  &--slider {
+    padding-bottom: 5rem;
+    background: $color-white-1;
+  }
+
+  @include min(769) {
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+
+    &__container {
+      & figure {
+        margin: 0;
+      }
+    }
+
+    &:not(&--heading, &--slider) {
+      & article {
+        & > *:not(figure) {
+          grid-column: 2;
+          grid-row: span 5;
+        }
+      }
+    }
+
+    &--invert {
+      & article > figure {
+        grid-column: 2;
+      }
+
+      & article > *:not(figure) {
+        grid-column: 1 !important;
+        align-self: baseline;
+      }
+    }
+
+    &--heading {
+      & article {
+        align-items: center;
+      }
+
+      & article > div {
+        grid-column: 2;
+        grid-row: 3;
+      }
+
+      & > div {
+        grid-row: span 6;
+      }
+
+      & h2 {
+        grid-column: span 2;
+        padding-bottom: 5rem;
+      }
+
+      & figure {
+        grid-column: 1;
+      }
+    }
+
+    &--slider {
+      padding: 5rem 0 0;
+      background: $color-white-1;
+
+      & article > *:not(figure) {
+        grid-column: span 2;
+      }
+
+      & p {
+        margin: 2.5rem 0 5rem;
+      }
+    }
+  }
+}

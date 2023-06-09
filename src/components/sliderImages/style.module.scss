@@ -1,0 +1,82 @@
+@import "/src/sass/abstracts/variables";
+@import "/src/sass/abstracts/utilities";
+
+.slider {
+  margin: 7rem 0 0;
+
+  &__arrows {
+    position: absolute;
+    top: -4rem;
+    right: 4rem;
+
+    & button {
+      border: 2px solid black;
+      background: none;
+      & svg {
+        transform: rotate(0);
+      }
+    }
+
+    & button:last-of-type {
+      & svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__slide {
+    & img {
+      border-radius: 1rem;
+    }
+  }
+
+  &__slide:nth-last-child(10) {
+    & img {
+      width: 60px;
+      object-fit: fill;
+    }
+  }
+
+  @include min(769) {
+    &__slide {
+      & img {
+        height: 400px;
+        width: 350px;
+        object-fit: cover;
+        border-radius: 2rem;
+      }
+    }
+
+    &__slide:nth-last-child(10) {
+      & img {
+        width: 90px;
+      }
+    }
+
+    &__slide--inactive {
+      & img {
+        height: 400px;
+        width: 90px;
+        object-fit: fill;
+      }
+    }
+  }
+
+  @include min(769) {
+    & {
+      width: 80vw;
+      left: 50%;
+      top: 25%;
+      transform: translate(-53%, -50%);
+      max-width: 1350px;
+    }
+  }
+}
+
+.imageWrapper {
+  transition: width 0.3s ease;
+}
+
+.loaded {
+  display: block !important;
+}
